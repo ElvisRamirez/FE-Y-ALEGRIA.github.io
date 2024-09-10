@@ -1,6 +1,7 @@
 .bg-red {
     background-color: rgba(255, 0, 0, 0.932); /* Rojo con 80% de opacidad */
   }
+  
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -67,6 +68,4 @@
     }
 }
 
-.contenido {
-    display: none;
-}
+
