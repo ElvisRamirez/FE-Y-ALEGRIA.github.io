@@ -29,6 +29,30 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="path/to/bootstrap.css"> <!-- Asegúrate de enlazar Bootstrap -->
+    <style>
+     .container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('img/fondo1.png'); /* Cambia esta ruta a la ubicación de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Ajusta la visibilidad de la imagen de fondo */
+            z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+        }
+    </style>
+ </head>
 </head>
 
 <body>
@@ -40,7 +64,8 @@
     <div class="container-fluid bg-light position-relative shadow">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-6 py-lg-6 px-0 px-lg-5">
             <a href="" class="navbar-brand font-weight-bold text-secondary">
-                <img src="img/alegria.png" alt="KidKinder" style="height: 60px; width: 150px; border-radius: 10px; border: 2px solid #ffffff;">
+                <img src="img/alegria.png" alt="KidKinder"
+                    style="height: 60px; width: 150px; border-radius: 10px; border: 2px solid #ffffff;">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -61,7 +86,7 @@
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-               
+
             </div>
         </nav>
     </div>
@@ -70,15 +95,17 @@
 
     <!-- Header Start -->
     <div class="container-fluid bg-red px-0 px-md-5 mb-5">
-       
+
         <div class="row align-items-center px-3">
             <div class="col-lg-6 text-center text-lg-left">
-                <h4 class="text-white mb-4 mt-5 mt-lg-0 text-animation">"Educar Humanizando el corazón para la libertad y la justicia "</h4>
-                <h1 class="display-3 font-weight-bold text-white text-animation" style="animation-delay: 0.5s;">Unidad Educativa Fe y Alegría</h1>
+                <h4 class="text-white mb-4 mt-5 mt-lg-0 text-animation">"Educar Humanizando el corazón para la libertad
+                    y la justicia "</h4>
+                <h1 class="display-3 font-weight-bold text-white text-animation" style="animation-delay: 0.5s;">Unidad
+                    Educativa Fe y Alegría</h1>
                 <p class="text-white mb-4 text-animation" style="animation-delay: 1s;">SANTO DOMINGO-ECUADOR</p>
                 <!-- <a href="" class="btn btn-secondary mt-1 py-3 px-5 text-animation" style="animation-delay: 1.5s;">Learn More</a> -->
-              </div>
-              
+            </div>
+
             <div class="col-lg-6 text-center text-lg-right">
                 <img class="img-fluid mt-5" src="img/header.jpg" alt="">
             </div>
@@ -89,21 +116,26 @@
 
     <!-- Facilities Start -->
     <div class="container-fluid pt-5">
-        
+     
         <div class="container pb-3">
-           <center> <h1 class="mb-4">Valores institucionales</h1></center>
+           
+            <center>
+                <h1 class="mb-4">Valores institucionales</h1>
+            </center>
             <div class="row">
-                
+
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
                         <i class=" h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
                             <h4>Espiritualidad Transformadora</h4>
-                            <p class="m-0">La Espiritualidad Transformadora de Fe y Alegría está inspirada en la fe cristiana, en la indignación ante las injusticias y en
+                            <p class="m-0">La Espiritualidad Transformadora de Fe y Alegría está inspirada en la fe
+                                cristiana, en la indignación ante las injusticias y en
                                 sueños y esperanzas de mujeres y hombres comprometidos
                                 en superar las problemáticas que afectan a la comunidad y a
                                 la casa común. La espiritualidad transformadora nos invita a
-                                poner los pies sobre la tierra para partir del contexto en la búsqueda de un mundo mejor.</p>
+                                poner los pies sobre la tierra para partir del contexto en la búsqueda de un mundo
+                                mejor.</p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +145,9 @@
                         <div class="pl-4">
                             <h4>Justicia entre los seres humanos y con la naturaleza</h4>
                             <p class="m-0">La justicia que inspiró a Fe y Alegría es bíblica, está orientada
-                                a la protección de los más débiles, aquellas/os que son descuidadas/os por el sistema (Dt. 10,18: huérfanos, viudas y extranjeros). Incluye el cuidado y defensa de la naturaleza, pues
+                                a la protección de los más débiles, aquellas/os que son descuidadas/os por el sistema
+                                (Dt. 10,18: huérfanos, viudas y extranjeros). Incluye el cuidado y defensa de la
+                                naturaleza, pues
                                 también es vulnerada por el modelo de desarrollo</p>
                         </div>
                     </div>
@@ -124,7 +158,8 @@
                         <i class=" h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
                             <h4>Respeto a la diversidad y la diferencia</h4>
-                            <p class="m-0">Fe y Alegría aconteció como expresión de respeto a las/os pobres, a las/os otras/os que son diversas/os y descartadas/os.
+                            <p class="m-0">Fe y Alegría aconteció como expresión de respeto a las/os pobres, a las/os
+                                otras/os que son diversas/os y descartadas/os.
                                 Incluye a otras nacionalidades y grupos étnicos, a las personas
                                 con discapacidad y a las diversidades de género. Supone un
                                 trato igualitario, amable y cortés, como garantía absoluta de
@@ -148,7 +183,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Facilities Start -->
 
 
@@ -160,35 +195,35 @@
                     <img class="img-fluid rounded mb-5 mb-lg-0" src="img/about-1.jpg" alt="">
                 </div>
                 <div class="col-lg-7">
-                  
+
                     <h1 class="mb-4">Visión y Misión</h1>
                     <p class="section-title px-5"><span class="px-2">Misión</span></p>
-                          <p>Soñamos con un Ecuador donde todas/
-                            os tengamos las mismas posibilidades
-                            para una vida digna, con una Fe y Alegría
-                            más profética, comprometida con el
-                            cuidado y defensa de la persona y la casa
-                            común, presente en las nuevas fronteras
-                            de exclusión, capaz de responder a los
-                            contextos y necesidades educativas de
-                            nuestro país.</p>
+                    <p>Soñamos con un Ecuador donde todas/
+                        os tengamos las mismas posibilidades
+                        para una vida digna, con una Fe y Alegría
+                        más profética, comprometida con el
+                        cuidado y defensa de la persona y la casa
+                        común, presente en las nuevas fronteras
+                        de exclusión, capaz de responder a los
+                        contextos y necesidades educativas de
+                        nuestro país.</p>
                     <!-- <div class="row pt-2 pb-4"> -->
-                        <!-- <div class="col-6 col-md-4"> -->
-                            <p class="section-title px-5"><span class="px-2">Visión</span></p>
-                            <p>Fe y Alegría - Ecuador es un Movimiento
-                                de Educación Popular Integral, Promoción
-                                Social y Acción Pública que, partiendo de
-                                los diversos contextos de comunidades
-                                y personas excluidas y empobrecidas de
-                                nuestro país, contribuye a la transformación
-                                social, mediante una Propuesta Educativa
-                                de calidad, innovadora y participativa,
-                                desde la vivencia de una espiritualidad
-                                transformadora inspirada en el evangelio,
-                                los derechos humanos y de la naturaleza.
-                                </p>
-                        <!-- </div> -->
-                        <!-- <div class="col-6 col-md-8">
+                    <!-- <div class="col-6 col-md-4"> -->
+                    <p class="section-title px-5"><span class="px-2">Visión</span></p>
+                    <p>Fe y Alegría - Ecuador es un Movimiento
+                        de Educación Popular Integral, Promoción
+                        Social y Acción Pública que, partiendo de
+                        los diversos contextos de comunidades
+                        y personas excluidas y empobrecidas de
+                        nuestro país, contribuye a la transformación
+                        social, mediante una Propuesta Educativa
+                        de calidad, innovadora y participativa,
+                        desde la vivencia de una espiritualidad
+                        transformadora inspirada en el evangelio,
+                        los derechos humanos y de la naturaleza.
+                    </p>
+                    <!-- </div> -->
+                    <!-- <div class="col-6 col-md-8">
                             <ul class="list-inline m-0">
                                 <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
                                 <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
@@ -217,7 +252,8 @@
                         <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
                         <div class="card-body text-center">
                             <h4 class="card-title">Drawing Class</h4>
-                            <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
+                            <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo
+                                et no et, ipsum ipsum erat duo amet clita duo</p>
                         </div>
                         <div class="card-footer bg-transparent py-4 px-5">
                             <div class="row border-bottom">
@@ -245,7 +281,8 @@
                         <img class="card-img-top mb-2" src="img/class-2.jpg" alt="">
                         <div class="card-body text-center">
                             <h4 class="card-title">Language Learning</h4>
-                            <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
+                            <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo
+                                et no et, ipsum ipsum erat duo amet clita duo</p>
                         </div>
                         <div class="card-footer bg-transparent py-4 px-5">
                             <div class="row border-bottom">
@@ -273,7 +310,8 @@
                         <img class="card-img-top mb-2" src="img/class-3.jpg" alt="">
                         <div class="card-body text-center">
                             <h4 class="card-title">Basic Science</h4>
-                            <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
+                            <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo
+                                et no et, ipsum ipsum erat duo amet clita duo</p>
                         </div>
                         <div class="card-footer bg-transparent py-4 px-5">
                             <div class="row border-bottom">
@@ -303,7 +341,7 @@
 
 
     <!-- Registration Start -->
-    <div class="container-fluid py-5">
+    <!-- <div class="container-fluid py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7 mb-5 mb-lg-0">
@@ -313,9 +351,11 @@
                         ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
                         dolor</p>
                     <ul class="list-inline m-0">
-                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Labore eos amet dolor amet diam</li>
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Labore eos amet dolor amet diam
+                        </li>
                         <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Diam dolor diam elitripsum vero.</li>
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Diam dolor diam elitripsum vero.
+                        </li>
                     </ul>
                     <a href="" class="btn btn-primary mt-4 py-2 px-4">Book Now</a>
                 </div>
@@ -327,10 +367,12 @@
                         <div class="card-body rounded-bottom bg-primary p-5">
                             <form>
                                 <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Name"
+                                        required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                                    <input type="email" class="form-control border-0 p-4" placeholder="Your Email"
+                                        required="required" />
                                 </div>
                                 <div class="form-group">
                                     <select class="custom-select border-0 px-4" style="height: 47px;">
@@ -341,7 +383,8 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <button class="btn btn-secondary btn-block border-0 py-3" type="submit">Book Now</button>
+                                    <button class="btn btn-secondary btn-block border-0 py-3" type="submit">Book
+                                        Now</button>
                                 </div>
                             </form>
                         </div>
@@ -349,7 +392,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Registration End -->
 
 
@@ -363,7 +406,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-3 text-center team mb-5">
                     <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="" >
+                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
                         <div
                             class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
                             <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
@@ -379,7 +422,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 text-center team mb-5">
                     <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="" >
+                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
                         <div
                             class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
                             <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
@@ -395,7 +438,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 text-center team mb-5">
                     <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="" >
+                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
                         <div
                             class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
                             <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
@@ -411,7 +454,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 text-center team mb-5">
                     <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="" >
+                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
                         <div
                             class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
                             <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
@@ -432,7 +475,7 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
+    <!-- <div class="container-fluid py-5">
         <div class="container p-0">
             <div class="text-center pb-2">
                 <p class="section-title px-5"><span class="px-2">Testimonial</span></p>
@@ -442,10 +485,12 @@
                 <div class="testimonial-item px-3">
                     <div class="bg-light shadow-sm rounded mb-4 p-4">
                         <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor
+                        ipsum clita
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-1.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <img class="rounded-circle" src="img/testimonial-1.jpg" style="width: 70px; height: 70px;"
+                            alt="Image">
                         <div class="pl-3">
                             <h5>Parent Name</h5>
                             <i>Profession</i>
@@ -455,10 +500,12 @@
                 <div class="testimonial-item px-3">
                     <div class="bg-light shadow-sm rounded mb-4 p-4">
                         <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor
+                        ipsum clita
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-2.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <img class="rounded-circle" src="img/testimonial-2.jpg" style="width: 70px; height: 70px;"
+                            alt="Image">
                         <div class="pl-3">
                             <h5>Parent Name</h5>
                             <i>Profession</i>
@@ -468,10 +515,12 @@
                 <div class="testimonial-item px-3">
                     <div class="bg-light shadow-sm rounded mb-4 p-4">
                         <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor
+                        ipsum clita
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-3.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <img class="rounded-circle" src="img/testimonial-3.jpg" style="width: 70px; height: 70px;"
+                            alt="Image">
                         <div class="pl-3">
                             <h5>Parent Name</h5>
                             <i>Profession</i>
@@ -481,10 +530,12 @@
                 <div class="testimonial-item px-3">
                     <div class="bg-light shadow-sm rounded mb-4 p-4">
                         <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor
+                        ipsum clita
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-4.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <img class="rounded-circle" src="img/testimonial-4.jpg" style="width: 70px; height: 70px;"
+                            alt="Image">
                         <div class="pl-3">
                             <h5>Parent Name</h5>
                             <i>Profession</i>
@@ -493,7 +544,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Testimonial End -->
 
 
@@ -515,7 +566,8 @@
                                 <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
                                 <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
                             </div>
-                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
+                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod
+                                kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
                             <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
                         </div>
                     </div>
@@ -530,7 +582,8 @@
                                 <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
                                 <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
                             </div>
-                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
+                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod
+                                kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
                             <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
                         </div>
                     </div>
@@ -545,7 +598,8 @@
                                 <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
                                 <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
                             </div>
-                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
+                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod
+                                kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
                             <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
                         </div>
                     </div>
@@ -558,76 +612,82 @@
 
     <!-- Footer Start -->
 
-  <!-- Footer Start -->
-  <div class="container-fluid bg-danger text-white mt-5 py-5 px-sm-3 px-md-5">
-    <div class="row pt-5">
-        <div class="col-lg-3 col-md-6 mb-5">
-            <a href="" class="navbar-brand font-weight-bold text-secondary">
-                <img src="img/logo.png" alt="KidKinder" style="height: 60px; width: 150px; border-radius: 10px; border: 2px solid #ffffff;">
-            </a>
-            <p>Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea dolor et magna dolor, elitr rebum duo est sed diam elitr. Stet elitr stet diam duo eos rebum ipsum diam ipsum elitr.</p>
-            <div class="d-flex justify-content-start mt-4">
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-danger text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand font-weight-bold text-secondary">
+                    <img src="img/logo.png" alt="KidKinder"
+                        style="height: 60px; width: 150px; border-radius: 10px; border: 2px solid #ffffff;">
+                </a>
+                <p>Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea dolor et magna dolor, elitr rebum
+                    duo est sed diam elitr. Stet elitr stet diam duo eos rebum ipsum diam ipsum elitr.</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <style>
+                    .social-btn {
+                        background-color: white;
+                        color: #e61010;
+                        /* Color azul del ícono */
+                        border-color: #f3f8fd;
+                        /* Borde azul */
+                    }
+
+                    .social-btn:hover {
+                        background-color: #ffefef;
+                        /* Cambia el fondo a azul al pasar el mouse */
+                        color: rgb(212, 11, 11);
+                        /* Cambia el color del ícono a blanco al pasar el mouse */
+                    }
+                </style>
+
+
             </div>
-            
-            <style>
-                .social-btn {
-                    background-color: white;
-                    color: #e61010; /* Color azul del ícono */
-                    border-color: #f3f8fd; /* Borde azul */
-                }
-            
-                .social-btn:hover {
-                    background-color: #ffefef; /* Cambia el fondo a azul al pasar el mouse */
-                    color: rgb(212, 11, 11); /* Cambia el color del ícono a blanco al pasar el mouse */
-                }
-            </style>
-            
-            
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h3 class="text-white mb-4">Ponte en contacto</h3>
-            <div class="d-flex">
-                <h4 class="fa fa-map-marker-alt text-white"></h4>
-                <div class="pl-3">
-                    <h5 class="text-white">Dirección</h5>
-                    <p>123 Street, New York, USA</p>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-white mb-4">Ponte en contacto</h3>
+                <div class="d-flex">
+                    <h4 class="fa fa-map-marker-alt text-white"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Dirección</h5>
+                        <p>123 Street, New York, USA</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-envelope text-white"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Email</h5>
+                        <p>info@example.com</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-phone-alt text-white"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Celular</h5>
+                        <p>+012 345 67890</p>
+                    </div>
                 </div>
             </div>
-            <div class="d-flex">
-                <h4 class="fa fa-envelope text-white"></h4>
-                <div class="pl-3">
-                    <h5 class="text-white">Email</h5>
-                    <p>info@example.com</p>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-white mb-4">Enlaces rápidos</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sobre nosotros</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestras Clases</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestros maestros</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestro Blog</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contacta con nosotros</a>
                 </div>
             </div>
-            <div class="d-flex">
-                <h4 class="fa fa-phone-alt text-white"></h4>
-                <div class="pl-3">
-                    <h5 class="text-white">Celular</h5>
-                    <p>+012 345 67890</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h3 class="text-white mb-4">Enlaces rápidos</h3>
-            <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Sobre nosotros</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestras Clases</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestros maestros</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestro Blog</a>
-                <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contacta con nosotros</a>
-            </div>
-        </div>
-        <!-- <div class="col-lg-3 col-md-6 mb-5">
+            <!-- <div class="col-lg-3 col-md-6 mb-5">
             <h3 class="text-primary mb-4">Newsletter</h3>
             <form action="">
                 <div class="form-group">
@@ -642,16 +702,16 @@
                 </div>
             </form>
         </div> -->
+        </div>
+        <div class="container-fluid pt-5" style="border-top: 1px solid rgb(255, 255, 255);;">
+            <p class="m-0 text-center text-white">
+                &copy; <a class="text-white font-weight-bold" href="#">Fe y Alegría</a>.Todos los derechos reservados.
+
+
+            </p>
+        </div>
     </div>
-    <div class="container-fluid pt-5" style="border-top: 1px solid rgb(255, 255, 255);;">
-        <p class="m-0 text-center text-white">
-            &copy; <a class="text-white font-weight-bold" href="#">Fe y Alegría</a>.Todos los derechos reservados.
-          
-          
-        </p>
-    </div>
-</div>
-<!-- Footer End -->
+    <!-- Footer End -->
 
 
 
