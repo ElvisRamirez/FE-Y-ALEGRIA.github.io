@@ -58,7 +58,7 @@
 
 .preload-image {
     max-width: 200px; /* Ajusta el tamaño según necesites */
-    animation: fadeInOut 2s infinite;
+    animation: fadeInOut 1s infinite;
 }
 
 @keyframes fadeInOut {
