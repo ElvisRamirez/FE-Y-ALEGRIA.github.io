@@ -27,6 +27,28 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .container {
+               position: relative;
+               overflow: hidden;
+           }
+   
+           .container::before {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background-image: url('img/fondo1.png'); /* Cambia esta ruta a la ubicación de tu imagen */
+               background-size: cover;
+               background-position: center;
+               background-repeat: no-repeat;
+               opacity: 0.1; /* Ajusta la visibilidad de la imagen de fondo */
+               z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+           }
+       </style>
 </head>
 
 <body>
@@ -79,13 +101,15 @@
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container">
+            
             <div class="row align-items-center">
+                
                 <div class="col-lg-5">
-                    <img class="img-fluid rounded mb-5 mb-lg-0" src="img/about-1.jpg" alt="">
+                    <img class="img-fluid rounded mb-5 mb-lg-0" src="img/conocer.PNG" alt="">
                 </div>
                 <div class="col-lg-7">
                     <p class="section-title px-5"><span class="px-2">Desde el Principio</span></p>
-                    <h1 class="mb-4">Historia</h1>
+                    <h1 class="mb-4">Historia de Fe y Alegría</h1>
                     <p>Fe y Alegría es en Ecuador la red educativa más importante después del sistema de Educación Oficial. 
                         Presente en 75 centros educativos en 14 provincias, en zonas rurales y urbano – marginales del país, atiende a más de 27.000 estudiantes en su sistema de escuelas y colegios.
                         Fe y Alegría Ecuador es la primogénita, después de la experiencia fundacional en Venezuela.
@@ -94,18 +118,19 @@
                         Cuatro meses antes de la fundación en Quito, el P. José María Vélaz, visionario fundador de Fe y alegría, dedicó doce días a recorrer barrios de Quito y Guayaquil y a sembrar entusiasmos entre posibles cooperantes. Confiesa Vélaz que se sintió “favorablemente impresionado por el gran afán de cultura en el pueblo y por los ofrecimientos concretos y valiosos que desde el primer momento se le hicieron”. Veláz confiesa haber iniciado su aventura más allá de Venezuela por “Ecuador, país escogido por pobre y por difícil, 
                         para poder confrontar nuestros métodos de acción y experimentar si éramos capaces para una ampliación latinoamericana”.</p>
                     <div class="row pt-2 pb-4">
-                        <div class="col-6 col-md-4">
-                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
-                        </div>
+                       
                         <div class="col-6 col-md-8">
                             <ul class="list-inline m-0">
-                                <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
+                                <li class="py-2 border-top border-bottom"><i class="text-primary mr-3"></i>"Educar es hacer hombres y mujeres en plenitud,que conciban la vida como servicio a los grandes ideales"</li>
+                                <!-- <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
+                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li> -->
                             </ul>
                         </div>
+                        <div class="col-6 col-md-4">
+                            <img class="img-fluid rounded" src="img/fundador.jpg" alt="">
+                        </div>
                     </div>
-                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
+                    <!-- <a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a> -->
                 </div>
             </div>
         </div>
@@ -115,62 +140,67 @@
 
     <!-- Facilities Start -->
     <div class="container-fluid pt-5">
+          
+        <center>
+            <h1 class="mb-4">Logros Alcanzados</h1>
+        </center>
         <div class="container pb-3">
             <div class="row">
-                <div class="col-lg-4 col-md-6 pb-1">
+                <div class="col-lg-12 col-md-6 pb-1">
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
+                        <!-- Imagen a la izquierda -->
+                        <img src="img/logro1.PNG" alt="Descripción de la imagen" class="img-fluid" style="max-width: 150px; height: auto;">
+                
                         <div class="pl-4">
-                            <h4>Play Ground</h4>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                            <h4>Gestión Directiva</h4>
+                            <p class="m-0">Este año priorizamos la gestión orientando el sentido de sus procesos educativos al cuidado de la vida en todas sus formas,
+                                reconciliándonos con la tierra y los seres que la habitan.
+                                Respondiendo también a la transformación de los espacios de aprendizaje, cultivamos huertos y jardines con prácticas agroecológicas en la Unidad Educativa Fe y Alegría en Santo Domingo, Bernabé de Larraúl, Juan Pablo II y Sagrado Corazón de Jesús en El Sade. Además hemos trabajado en fortalecer la práctica educativa de nuestros centros rurales con la contextualización del currículo con un enfoque agroecológico,
+                                de emprendimiento comunitario con economía popular y solidaria.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 pb-1">
+                
+                <div class="col-lg-12 col-md-6 pb-1">
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <i class="flaticon-022-drum h1 font-weight-normal text-primary mb-3"></i>
+                        <i class=" h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
-                            <h4>Music and Dance</h4>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                            <h4>Enseñanza Aprendizaje</h4>
+                            <p class="m-0">Hemos logrado garantizar los derechos de las personas con diversidad funcional intelectual,
+                                 como resultado de ello se ha conseguido la primera promoción de diecinueve estudiantes con diversidad funcional intelectual del Bachillerato especializado. Hemos desarrollando las destrezas necesarias para su vida en proyectos de costura, alimentación, productos de limpieza, manualidades, fabricación de escobas, diseño gráfico, pintura y audiovisuales. Logramos aliarnos con la Unidad Distrital de Apoyo a la Inclusión,
+                                 UDAI para preparar los instrumentos de evaluación adecuados a la diversidad de estudiantes.
+                            </p>
+                        </div>
+                        <img src="img/logro2.PNG" alt="Descripción de la imagen" class="img-fluid" style="max-width: 150px; height: auto;">
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class=" h1 font-weight-normal text-primary mb-3"></i>
+                        <img src="img/logro3.PNG" alt="Descripción de la imagen" class="img-fluid" style="max-width: 150px; height: auto;">
+                        <div class="pl-4">
+                            <h4>Convivencia y ciudadanía</h4>
+                            <p class="m-0">Fortalecimos el compromiso de trabajar por la construcción de espacios libres de violencia para una cultura de paz y dignidad para todas y todos.
+                                 Se realizaron talleres de reconciliación por la promoción de la ternura como estrategia para la cultura de paz con la campaña Ternurando con la Juventud, 
+                                 los mismos que fueron planificados y ejecutados por los jóvenes Cefistas, en espacios compartidos con líderes de varias Instituciones educativas,
+                                 con el apoyo de los distritos de educación.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 pb-1">
+                <div class="col-lg-12 col-md-6 pb-1">
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <i class="flaticon-030-crayons h1 font-weight-normal text-primary mb-3"></i>
+                        <i class=" h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
-                            <h4>Arts and Crafts</h4>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                            <h4>Interacción Escuela Comunidad</h4>
+                            <p class="m-0">Hemos gestionado alianzas estratégicas con organizaciones e instituciones que aportan desde sus saberes y experiencias significativas a la misión de nuestro Movimiento Educativo. 
+                                Muestra de ello es el trabajo conjunto en San Miguel de Los Bancos con la fundación Imaymana, Revista Noroccidente Relax y Aventura, Mindo Lindo y Fempidec;
+                                 Formaciones en Higiene y Salud menstrual junto a Fundación Lunita Lunera y Convenios con institutos y universidades de la región.</p>
                         </div>
+                        <img src="img/logro4.PNG" alt="Descripción de la imagen" class="img-fluid" style="max-width: 150px; height: auto;">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <i class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Safe Transportation</h4>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <i class="flaticon-025-sandwich h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Healthy food</h4>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <i class="flaticon-047-backpack h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Educational Tour</h4>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
-                        </div>
-                    </div>
-                </div>
+                
+               
             </div>
         </div>
     </div>
