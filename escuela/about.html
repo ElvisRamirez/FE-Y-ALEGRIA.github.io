@@ -48,6 +48,14 @@
                opacity: 0.1; /* Ajusta la visibilidad de la imagen de fondo */
                z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
            }
+
+           .text-white1 {
+  color: #fff !important;
+  text-shadow: 1px 1px 0 #000, /* Sombra hacia la derecha y abajo */
+               -1px -1px 0 #000, /* Sombra hacia la izquierda y arriba */
+               1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
+               -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
+}
        </style>
 </head>
 
@@ -85,11 +93,11 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid bg-primary mb-5" style="background-image: url('img/fondo2.png'); background-size: cover; background-position: center;">
-        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-            <h3 class="display-3 font-weight-bold text-white">Conócenos</h3>
-            <div class="d-inline-flex text-white">
-                <p class="m-0"><a class="text-white" href="index.html">Inicio</a></p>
+    <div class="container-fluid bg-primary mb-6" style="background-image: url('img/fondo2.png'); background-size: cover; background-position: center;">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 450px">
+            <h3 class="display-3 font-weight-bold text-white1">Conócenos</h3>
+            <div class="d-inline-flex text-white1">
+                <p class="m-0"><a class="text-white1" href="index.html">Inicio</a></p>
                 <p class="m-0 px-2">/</p>
                 <p class="m-0">Conócenos</p>
             </div>
