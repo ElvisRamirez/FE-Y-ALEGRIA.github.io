@@ -28,7 +28,38 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<style>
 
+.bg-primary1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-primary1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(68, 0, 0, 0.5); /* Ajusta la opacidad aquí */
+    z-index: 1;
+}
+
+.bg-primary1 .d-flex {
+    position: relative;
+    z-index: 2;
+    color: #fff; /* Asegúrate de que el texto sea legible sobre la superposición */
+}
+
+.text-white1 {
+    color: rgb(245, 245, 245) !important;
+    text-shadow: 1px 1px 0 #000, /* Sombra hacia la derecha y abajo */
+                 -1px -1px 0 #000, /* Sombra hacia la izquierda y arriba */
+                 1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
+                 -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
+  }
+</style>
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow">
@@ -42,7 +73,7 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Inicio</a>
-                    <a href="about.html" class="nav-item nav-link">Conócenos</a>
+                    <a href="about.html" class="nav-item nav-link">¿Quiénes Somos?</a>
                     <a href="class.html" class="nav-item nav-link">Clases</a>
                     <a href="team.html" class="nav-item nav-link">Nuestros Maestros</a>
                     <a href="gallery.html" class="nav-item nav-link active">Galería</a>
@@ -63,11 +94,12 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid bg-primary mb-5">
-        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-            <h3 class="display-3 font-weight-bold text-white">Galería</h3>
-            <div class="d-inline-flex text-white">
-                <p class="m-0"><a class="text-white" href="index.html">Inicio</a></p>
+ 
+    <div class="container-fluid bg-primary1 mb-5" style="background-image: url('img/unid.png'); background-size: cover; background-position: center;">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 450px">
+            <h3 class="display-3 font-weight-bold text-white1">Galería</h3>
+            <div class="d-inline-flex text-white1">
+                <p class="m-0"><a class="text-white1" href="index.html">Inicio</a></p>
                 <p class="m-0 px-2">/</p>
                 <p class="m-0">Galería</p>
             </div>
@@ -105,25 +137,36 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
                         </div>
+                        <h4>Donald John</h4>
+                        <i>Art Teacher</i>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
+                
+                
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
                         </div>
+                        <h4>Donald John</h4>
+                        <i>Art Teacher</i>
                     </div>
                 </div>
+                
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative overflow-hidden mb-2">
                         <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">

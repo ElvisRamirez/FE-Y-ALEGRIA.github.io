@@ -27,8 +27,38 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
 </head>
+<style>.text-white12 {
+    color: rgb(245, 245, 245) !important;
+    text-shadow: 1px 1px 0 #000, /* Sombra hacia la derecha y abajo */
+                 -1px -1px 0 #000, /* Sombra hacia la izquierda y arriba */
+                 1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
+                 -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
+  }
+  .bg-primary {
+    position: relative;
+    overflow: hidden;
+}
 
+.bg-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(68, 0, 0, 0.5); /* Ajusta la opacidad aquí */
+    z-index: 1;
+}
+
+.bg-primary .d-flex {
+    position: relative;
+    z-index: 2;
+    color: #fff; /* Asegúrate de que el texto sea legible sobre la superposición */
+}
+
+  </style>
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow">
@@ -42,7 +72,7 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Inicio</a>
-                    <a href="about.html" class="nav-item nav-link">Conócenos</a>
+                    <a href="about.html" class="nav-item nav-link">¿Quiénes Somos?</a>
                     <a href="class.html" class="nav-item nav-link active">Clases</a>
                     <a href="team.html" class="nav-item nav-link">Nuestros Maestros</a>
                     <a href="gallery.html" class="nav-item nav-link">Galería</a>
@@ -63,11 +93,11 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid bg-primary mb-5">
-        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-            <h3 class="display-3 font-weight-bold text-white">Clases</h3>
-            <div class="d-inline-flex text-white">
-                <p class="m-0"><a class="text-white" href="index.html">Inicio</a></p>
+    <div class="container-fluid bg-primary mb-5" style="background-image: url('img/clasess.jpg'); background-size: cover; background-position: center;">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 450px">
+            <h3 class="display-3 font-weight-bold text-white12">Clases</h3>
+            <div class="d-inline-flex text-white12">
+                <p class="m-0"><a class="text-white12" href="index.html">Inicio</a></p>
                 <p class="m-0 px-2">/</p>
                 <p class="m-0">Nuestras Clases</p>
             </div>

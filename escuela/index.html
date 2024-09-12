@@ -52,11 +52,60 @@
             z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
         }
         .text-white1 {
-  color: #fff !important;
+  color: rgb(255, 248, 248) !important;
   text-shadow: 1px 1px 0 #000, /* Sombra hacia la derecha y abajo */
                -1px -1px 0 #000, /* Sombra hacia la izquierda y arriba */
                1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
                -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
+}
+.text-white12 {
+  color: rgb(233, 164, 16) !important;
+  text-shadow: 1px 1px 0 #000, /* Sombra hacia la derecha y abajo */
+               -1px -1px 0 #000, /* Sombra hacia la izquierda y arriba */
+               1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
+               -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
+}
+.text-white13 {
+  color: rgb(0, 0, 0) !important;
+}
+.bg-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(68, 0, 0, 0.5); /* Ajusta la opacidad aquí */
+    z-index: 1;
+}
+
+.bg-primary .d-flex {
+    position: relative;
+    z-index: 2;
+    color: #fff; /* Asegúrate de que el texto sea legible sobre la superposición */
+}
+
+/* Define una animación de fondo que se mueva ligeramente hacia arriba y hacia abajo */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: center 50%;
+  }
+  50% {
+    background-position: center 70%;
+  }
+  100% {
+    background-position: center 50%;
+  }
+}
+
+/* Aplica la animación al contenedor */
+.animated-background {
+  animation: backgroundAnimation 10s infinite alternate;
 }
 
 
@@ -73,7 +122,7 @@
     <div class="container-fluid bg-light position-relative shadow">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-6 py-lg-6 px-0 px-lg-5">
             <a href="" class="navbar-brand font-weight-bold text-secondary">
-                <img src="img/alegria.png" alt="KidKinder"
+                <img src="img/logo.png" alt="KidKinder"
                     style="height: 60px; width: 150px; border-radius: 10px; border: 2px solid #ffffff;">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -82,7 +131,7 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                    <a href="about.html" class="nav-item nav-link">Conócenos</a>
+                    <a href="about.html" class="nav-item nav-link">¿Quiénes Somos?</a>
                     <a href="class.html" class="nav-item nav-link">Clases</a>
                     <a href="team.html" class="nav-item nav-link">Nuestros Maestros</a>
                     <a href="gallery.html" class="nav-item nav-link">Galería</a>
@@ -101,21 +150,25 @@
     </div>
     <!-- Navbar End -->
 
-    <div class="container-fluid bg-primary mb-5" style="background-image: url('img/fondo3.jpg'); background-size: cover; background-position: center;">
-        <div class="d-flex flex-column align-items-center1 justify-content-center" style="min-height: 450px">
-          
+    <div class="container-fluid bg-primary mb-5 animated-background" style="background-image: url('img/inicio.jpg'); background-size: cover; background-position: center;">
+ 
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 430px">
             <div class="row align-items-center px-3">
-                <div class="col-lg-6 text-center text-lg-left">
-                    <h4 class="text-white1 mb-4 mt-5 mt-lg-0 text-animation">"Educar Humanizando el corazón para la libertad
+                <div class="col-lg-12 text-center">
+                    <h4 class="text-white12 mb-4 mt-5 mt-lg-12 text-animation">"Educar Humanizando el corazón para la libertad
                         y la justicia "</h4>
                     <h1 class="display-3 font-weight-bold text-white1 text-animation" style="animation-delay: 0.5s;">Unidad
                         Educativa Fe y Alegría</h1>
-                    <p class="text-white1 mb-4 text-animation" style="animation-delay: 1s;">SANTO DOMINGO-ECUADOR</p>
-                   
+                        <p class="text-white mb-12 text-animation" style="animation-delay: 1s; font-weight: bold;">SANTO DOMINGO-ECUADOR</p>
+
                 </div>
+                <!-- <div class="col-lg-6 text-center text-lg-right">
+                    <img class="img-fluid mt-5" src="img/header.jpg" alt="">
+                </div> -->
             </div>    
         </div>
     </div>
+    
     
     <!-- Header Start -->
     <!-- <div class="container-fluid bg-primary mb-5" style="background-image: url('img/fondo2.png'); background-size: cover; background-position: center;">
