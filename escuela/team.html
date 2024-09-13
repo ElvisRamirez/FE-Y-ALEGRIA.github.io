@@ -29,20 +29,22 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <style>
-    .text-white1 {
-    color: rgb(245, 245, 245) !important;
-    text-shadow: 1px 1px 0 #000, /* Sombra hacia la derecha y abajo */
-                 -1px -1px 0 #000, /* Sombra hacia la izquierda y arriba */
-                 1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
-                 -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
-  }
 
-  .bg-primary {
+     
+.text-white1 {
+  color: rgb(245, 245, 245) !important;
+  text-shadow: 1px 1px 0 #000, /* Sombra hacia la derecha y abajo */
+               -1px -1px 0 #000, /* Sombra hacia la izquierda y arriba */
+               1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
+               -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
+}
+
+.bg-primary1 {
     position: relative;
     overflow: hidden;
 }
 
-.bg-primary::before {
+.bg-primary1::before {
     content: "";
     position: absolute;
     top: 0;
@@ -53,10 +55,28 @@
     z-index: 1;
 }
 
-.bg-primary .d-flex {
+.bg-primary1 .d-flex {
     position: relative;
     z-index: 2;
     color: #fff; /* Asegúrate de que el texto sea legible sobre la superposición */
+}
+/* Define una animación de fondo que se mueva ligeramente hacia arriba y hacia abajo */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: center 50%;
+  }
+  50% {
+    background-position: center 70%;
+  }
+  100% {
+    background-position: center 50%;
+  }
+}
+
+
+/* Aplica la animación al contenedor */
+.animated-background {
+  animation: backgroundAnimation 10s infinite alternate;
 }
 </style>
 <body>
@@ -92,159 +112,115 @@
     <!-- Navbar End -->
 
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary mb-5" style="background-image: url('img/fondo3a1.jpg'); background-size: cover; background-position: center;">
-        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 450px">
-            <h3 class="display-3 font-weight-bold text-white1">Nuestros Maestros</h3>
-            <div class="d-inline-flex text-white1">
-                <p class="m-0"><a class="text-white1" href="index.html">Inicio</a></p>
-                <p class="m-0 px-2">/</p>
-                <p class="m-0">Maestros</p>
-            </div>
+   <!-- Header Start -->
+   <div class="container-fluid bg-primary1 mb-5 animated-background" style="background-image: url('img/maestros.jpg'); background-size: cover; background-position: center;">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 450px">
+        <h3 class="display-3 font-weight-bold text-white1">Nuestros Maestros</h3>
+        <div class="d-inline-flex text-white1">
+            <p class="m-0"><a class="text-white1" href="index.html">Inicio</a></p>
+            <p class="m-0 px-2">/</p>
+            <p class="m-0">Maestros</p>
         </div>
     </div>
-    <!-- Header End -->
+</div>
+<!-- Header End -->
 
 
     <!-- Team Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="text-center pb-2">
-                <p class="section-title px-5"><span class="px-2">Our Teachers</span></p>
-                <h1 class="mb-4">Meet Our Teachers</h1>
+   <!-- Gallery Start -->
+   <div class="container-fluid pt-5 pb-3">
+    <div class="container">
+        <div class="text-center pb-2">
+            <p class="section-title px-5"><span class="px-2">Our Gallery</span></p>
+            <h1 class="mb-4">Our Kids School Gallery</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mb-2">
+                <ul class="list-inline mb-4" id="portfolio-flters">
+                    <li class="btn btn-outline-primary m-1 active"  data-filter="*">All</li>
+                    <li class="btn btn-outline-primary m-1" data-filter=".first">Playing</li>
+                    <li class="btn btn-outline-primary m-1" data-filter=".second">Drawing</li>
+                    <li class="btn btn-outline-primary m-1" data-filter=".third">Reading</li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="" >
-                        <div
-                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+        </div>
+        <div class="row portfolio-container">
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                        <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                            <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                        </a>
                     </div>
-                    <h4>Julia Smith</h4>
-                    <i>Music Teacher</i>
                 </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="" >
-                        <div
-                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <h4>Jhon Doe</h4>
-                    <i>Language Teacher</i>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="" >
-                        <div
-                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <h4>Mollie Ross</h4>
-                    <i>Dance Teacher</i>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="" >
-                        <div
-                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <h4>Donald John</h4>
                     <i>Art Teacher</i>
                 </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="" >
-                        <div
-                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <h4>Julia Smith</h4>
-                    <i>Music Teacher</i>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="" >
-                        <div
-                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <h4>Jhon Doe</h4>
-                    <i>Language Teacher</i>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="" >
-                        <div
-                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <h4>Mollie Ross</h4>
-                    <i>Dance Teacher</i>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="" >
-                        <div
-                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            
+            
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <h4>Donald John</h4>
                     <i>Art Teacher</i>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                        <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                            <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                        <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                            <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                        <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                            <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<!-- Gallery End -->
+
     <!-- Team End -->
 
 
@@ -315,8 +291,8 @@
 
 
   <!-- Footer Start -->
-  <div class="container-fluid bg-danger text-white mt-5 py-5 px-sm-3 px-md-5">
-    <div class="row pt-5">
+  <div class="container-fluid bg-danger text-white mt-8 py-8 px-sm-8 px-md-8">
+    <div class="row pt-4">
         <div class="col-lg-6 col-md-6 mb-5">
             <a href="" class="navbar-brand font-weight-bold text-secondary">
                 <img src="img/logo.png" alt="KidKinder"

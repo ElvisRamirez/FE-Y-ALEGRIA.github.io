@@ -102,12 +102,18 @@
     background-position: center 50%;
   }
 }
-
 /* Aplica la animación al contenedor */
 .animated-background {
   animation: backgroundAnimation 10s infinite alternate;
 }
 
+.text-whitea {
+  color: rgb(7, 3, 3) !important;
+  text-shadow: 1px 1px 0 rgb(255, 255, 255), /* Sombra hacia la derecha y abajo */
+               -1px -1px 0 rgb(211, 209, 209), /* Sombra hacia la izquierda y arriba */
+               1px -1px 0 rgb(219, 219, 219), /* Sombra hacia la derecha y arriba */
+               -1px 1px 0 rgb(252, 252, 252); /* Sombra hacia la izquierda y abajo */
+}
 
     </style>
  </head>
@@ -158,8 +164,9 @@
                     <h4 class="text-white12 mb-4 mt-5 mt-lg-12 text-animation">"Educar Humanizando el corazón para la libertad
                         y la justicia "</h4>
                     <h1 class="display-3 font-weight-bold text-white1 text-animation" style="animation-delay: 0.5s;">Unidad
-                        Educativa Fe y Alegría</h1>
-                        <p class="text-white mb-12 text-animation" style="animation-delay: 1s; font-weight: bold;">SANTO DOMINGO-ECUADOR</p>
+                        Educativa Fiscomisional 
+                        <h1 class="display-3 font-weight-bold text-white1 text-animation" style="animation-delay: 0.5s;">"Fe y Alegría" </h1></h1>
+                        <p class="text-whitea mb-12 text-animation" style="animation-delay: 1s; font-weight: bold;">SANTO DOMINGO-ECUADOR</p>
 
                 </div>
                 <!-- <div class="col-lg-6 text-center text-lg-right">
@@ -192,7 +199,30 @@
 
     <!-- Header End -->
 
-
+    <div class="container-fluid py-5">
+        <div class="container">
+            
+            <div class="row align-items-center">
+                
+            
+                <div class="col-lg-7">
+                  
+                    <h1 class="mb-4">Misión y Visión</h1>
+                    <p class="section-title px-5"><span class="px-2">Misión</span></p>
+                    <p>Fe y Alegría - Ecuador es un movimiento de educación popular integral, promoción social y acción pública que, partiendo de los diversos contextos de comunidades y personas excluidas y empobrecidas de nuestro país, contribuye a la transformación social, 
+                        mediante una propuesta educativa de calidad, innovadora y participativa,
+                         desde la vivencia de una espiritualidad transformadora inspirada en el evangelio, los derechos humanos y de la naturaleza.</p>
+                         <p class="section-title px-5"><span class="px-2">Visión</span></p>
+                    <p>Soñamos con un Ecuador donde todas/os tengamos las mismas posibilidades para una vida digna, con una Fe y Alegría más profética, comprometida con el cuidado y defensa de la persona y la casa común, presente en las nuevas fronteras de exclusión, capaz de responder a los contextos y necesidades educativas de nuestro país.</p>
+                    
+                </div>
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-5 mb-lg-0" src="img/mision.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
     <!-- Facilities Start -->
     <div class="container-fluid pt-5">
      
@@ -642,8 +672,8 @@
     <!-- Footer Start -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-danger text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="row pt-5">
+    <div class="container-fluid bg-danger text-white mt-8 py-8 px-sm-8 px-md-8">
+        <div class="row pt-4">
             <div class="col-lg-6 col-md-6 mb-5">
                 <a href="" class="navbar-brand font-weight-bold text-secondary">
                     <img src="img/logosd.jpg" alt="KidKinder"

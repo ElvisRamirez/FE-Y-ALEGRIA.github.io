@@ -59,6 +59,25 @@
                  1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
                  -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
   }
+
+  /* Define una animación de fondo que se mueva ligeramente hacia arriba y hacia abajo */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: center 50%;
+  }
+  50% {
+    background-position: center 70%;
+  }
+  100% {
+    background-position: center 50%;
+  }
+}
+
+
+/* Aplica la animación al contenedor */
+.animated-background {
+  animation: backgroundAnimation 10s infinite alternate;
+}
 </style>
 <body>
     <!-- Navbar Start -->
@@ -95,7 +114,7 @@
 
     <!-- Header Start -->
  
-    <div class="container-fluid bg-primary1 mb-5" style="background-image: url('img/unid.png'); background-size: cover; background-position: center;">
+    <div class="container-fluid bg-primary1 mb-5 animated-background" style="background-image: url('img/unid.png'); background-size: cover; background-position: center;">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 450px">
             <h3 class="display-3 font-weight-bold text-white1">Galería</h3>
             <div class="d-inline-flex text-white1">
@@ -112,66 +131,56 @@
     <div class="container-fluid pt-5 pb-3">
         <div class="container">
             <div class="text-center pb-2">
-                <p class="section-title px-5"><span class="px-2">Our Gallery</span></p>
-                <h1 class="mb-4">Our Kids School Gallery</h1>
+                <p class="section-title px-5"><span class="px-2">Nuestra galería</span></p>
+                <h1 class="mb-4">Áreas de la Unidad escolar</h1>
             </div>
             <div class="row">
                 <div class="col-12 text-center mb-2">
                     <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-outline-primary m-1 active"  data-filter="*">All</li>
-                        <li class="btn btn-outline-primary m-1" data-filter=".first">Playing</li>
-                        <li class="btn btn-outline-primary m-1" data-filter=".second">Drawing</li>
-                        <li class="btn btn-outline-primary m-1" data-filter=".third">Reading</li>
+                        <li class="btn btn-outline-primary m-1 active"  data-filter="*">Mostrar Todo</li>
+                        <li class="btn btn-outline-primary m-1" data-filter=".first">Áreas Verdes</li>
+                        <li class="btn btn-outline-primary m-1" data-filter=".second">Zonas de recreación y bar</li>
+                        <li class="btn btn-outline-primary m-1" data-filter=".third">Aulas y Laboratotios</li>
                     </ul>
                 </div>
             </div>
             <div class="row portfolio-container">
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/area1.jpeg" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                            <a href="img/area1.jpeg" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="text-center team mb-5">
-                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
-                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
-                            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <h4>Donald John</h4>
-                        <i>Art Teacher</i>
-                    </div>
-                </div>
-                
-                
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="text-center team mb-5">
-                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
-                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
-                            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <h4>Donald John</h4>
-                        <i>Art Teacher</i>
-                    </div>
-                </div>
-                
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/area2.jpeg" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                            <a href="img/area2.jpeg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="img/area3.jpeg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/area3.jpeg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="img/recreacion11.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/recreacion11.jpg" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
@@ -179,9 +188,30 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/bar.jpeg" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                            <a href="img/bar.jpeg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="img/recreacion2.jpeg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/recreacion2.jpeg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="img/lab1.jpeg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/lab1.jpeg" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
@@ -189,9 +219,49 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/lab2.jpeg" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                            <a href="img/lab2.jpeg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="img/aula.jpeg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/aula.jpeg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="img/aula1.jpeg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/aula1.jpeg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="img/aula2.jpeg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/aula2.jpeg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid w-100" src="img/sala.jpeg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/sala.jpeg" data-lightbox="portfolio">
                                 <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
@@ -205,8 +275,8 @@
 
     
   <!-- Footer Start -->
-  <div class="container-fluid bg-danger text-white mt-5 py-5 px-sm-3 px-md-5">
-    <div class="row pt-5">
+  <div class="container-fluid bg-danger text-white mt-8 py-8 px-sm-8 px-md-8">
+    <div class="row pt-4">
         <div class="col-lg-6 col-md-6 mb-5">
             <a href="" class="navbar-brand font-weight-bold text-secondary">
                 <img src="img/logo.png" alt="KidKinder"
