@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- me quede en el 5 -->
+
 <head>
     <meta charset="utf-8">
     <title>Fe y Alegría</title>
@@ -29,62 +30,91 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <style>
+    .text-white1 {
+        color: rgb(245, 245, 245) !important;
+        text-shadow: 1px 1px 0 #000,
+            /* Sombra hacia la derecha y abajo */
+            -1px -1px 0 #000,
+            /* Sombra hacia la izquierda y arriba */
+            1px -1px 0 #000,
+            /* Sombra hacia la derecha y arriba */
+            -1px 1px 0 #000;
+        /* Sombra hacia la izquierda y abajo */
+    }
 
-     
-.text-white1 {
-  color: rgb(245, 245, 245) !important;
-  text-shadow: 1px 1px 0 #000, /* Sombra hacia la derecha y abajo */
-               -1px -1px 0 #000, /* Sombra hacia la izquierda y arriba */
-               1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
-               -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
+    .bg-primary1 {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .bg-primary1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(68, 0, 0, 0.5);
+        /* Ajusta la opacidad aquí */
+        z-index: 1;
+    }
+
+    .bg-primary1 .d-flex {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        /* Asegúrate de que el texto sea legible sobre la superposición */
+    }
+
+    /* Define una animación de fondo que se mueva ligeramente hacia arriba y hacia abajo */
+    @keyframes backgroundAnimation {
+        0% {
+            background-position: center 50%;
+        }
+
+        50% {
+            background-position: center 70%;
+        }
+
+        100% {
+            background-position: center 50%;
+        }
+    }
+
+
+    /* Aplica la animación al contenedor */
+    .animated-background {
+        animation: backgroundAnimation 10s infinite alternate;
+    }
+
+/* Ocultar elementos no visibles por defecto */
+/* .portfolio-item {
+    display: none;
+} */
+
+/* Estilo básico para los botones de paginación */
+.pagination .page-item {
+    cursor: pointer;
 }
 
-.bg-primary1 {
-    position: relative;
-    overflow: hidden;
+.pagination .page-item.disabled .page-link {
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
-.bg-primary1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(68, 0, 0, 0.5); /* Ajusta la opacidad aquí */
-    z-index: 1;
+.elemento {
+    z-index: 1; /* Incrementa o decrementa según sea necesario */
 }
 
-.bg-primary1 .d-flex {
-    position: relative;
-    z-index: 2;
-    color: #fff; /* Asegúrate de que el texto sea legible sobre la superposición */
-}
-/* Define una animación de fondo que se mueva ligeramente hacia arriba y hacia abajo */
-@keyframes backgroundAnimation {
-  0% {
-    background-position: center 50%;
-  }
-  50% {
-    background-position: center 70%;
-  }
-  100% {
-    background-position: center 50%;
-  }
-}
-
-
-/* Aplica la animación al contenedor */
-.animated-background {
-  animation: backgroundAnimation 10s infinite alternate;
-}
 </style>
+
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
             <a href="" class="navbar-brand font-weight-bold text-secondary">
-                <img src="img/logo.png" alt="KidKinder" style="height: 60px; width: 150px; border-radius: 10px; border: 2px solid #ffffff;">
+                <img src="img/logo.png" alt="KidKinder"
+                    style="height: 60px; width: 150px; border-radius: 10px; border: 2px solid #ffffff;">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -113,152 +143,215 @@
     <!-- Navbar End -->
 
 
-   <!-- Header Start -->
-   <div class="container-fluid bg-primary1 mb-5 animated-background" style="background-image: url('img/maestros.jpg'); background-size: cover; background-position: center;">
-    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 450px">
-        <h3 class="display-3 font-weight-bold text-white1">Nuestros Maestros</h3>
-        <div class="d-inline-flex text-white1">
-            <p class="m-0"><a class="text-white1" href="index.html">Inicio</a></p>
-            <p class="m-0 px-2">/</p>
-            <p class="m-0">Maestros</p>
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary1 mb-5 animated-background"
+        style="background-image: url('img/maestros.jpg'); background-size: cover; background-position: center;">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 450px">
+            <h3 class="display-3 font-weight-bold text-white1">Nuestros Maestros</h3>
+            <div class="d-inline-flex text-white1">
+                <p class="m-0"><a class="text-white1" href="index.html">Inicio</a></p>
+                <p class="m-0 px-2">/</p>
+                <p class="m-0">Maestros</p>
+            </div>
         </div>
     </div>
-</div>
-<!-- Header End -->
+    <!-- Header End -->
 
 
     <!-- Team Start -->
-   <!-- Gallery Start -->
-   <div class="container-fluid pt-5 pb-3">
-    <div class="container">
-        <div class="text-center pb-2">
-            <p class="section-title px-5"><span class="px-2">Our Gallery</span></p>
-            <h1 class="mb-4">Our Kids School Gallery</h1>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center mb-2">
-                <ul class="list-inline mb-4" id="portfolio-flters">
-                    <li class="btn btn-outline-primary m-1 active"  data-filter="*">Todos</li>
-                    <li class="btn btn-outline-primary m-1" data-filter=".first"> Área de Lengua y Literatura</li>
-                    <li class="btn btn-outline-primary m-1" data-filter=".second">Área de Cultura Física </li>
-                    <li class="btn btn-outline-primary m-1" data-filter=".third"> Área de Ciencias</li>
-                    <li class="btn btn-outline-primary m-1" data-filter=".fourth"> Área de Educación Basica </li>
-                </ul>
+    <!-- Gallery Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Our Gallery</span></p>
+                <h1 class="mb-4">Our Kids School Gallery</h1>
             </div>
-        </div>
-        <div class="row portfolio-container">
-            
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                <div class="text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4 rounded-circle">
-                        <img class="img-fluid w-100" src="img/maribelPonceq2.jpg" alt="">
-                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" 
-                            style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;" 
-                            href="mailto:silvanami1981@gmail.com">
-                             <i class="fas fa-envelope" style="font-size: 20px;"></i>
-                         </a>
-            
-                        </div>
-            
-                    </div>
-                    <h4>Silvana Intriago </h4>
-                    <i>Docente </i><br>
-                    <i>Licenciada en Ciencias de la Educación mención Educadores de Párvulos </i>
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <ul class="list-inline mb-4" id="portfolio-flters">
+                        <li class="btn btn-outline-primary m-1 active" data-filter="*">Todos</li>
+                        <li class="btn btn-outline-primary m-1" data-filter=".first"> Área de Lengua y Literatura</li>
+                        <li class="btn btn-outline-primary m-1" data-filter=".second">Área de Cultura Física </li>
+                        <li class="btn btn-outline-primary m-1" data-filter=".third"> Área de Ciencias</li>
+                        <li class="btn btn-outline-primary m-1" data-filter=".fourth"> Área de Educación Basica </li>
+                    </ul>
                 </div>
             </div>
-            
-            
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                <div class="text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4 rounded-circle">
-                        <img class="img-fluid w-100" src="img/juan1.jpg" alt="">
-                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <!-- Enlace para enviar un correo -->
-                            <a class="btn btn-outline-light text-center mr-2 px-0" 
-                               style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;" 
-                               href="mailto:juancarlos197860@hotmail.com">
-                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
-                            </a>
-                            <!-- Puedes agregar más íconos aquí si lo deseas -->
+            <div class="row portfolio-container">
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/maribelPonceq2.jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:silvanami1981@gmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+
+                            </div>
+
                         </div>
+                        <h4>Silvana Intriago </h4>
+                        <i>Docente </i><br>
+                        <i>Licenciada en Ciencias de la Educación mención Educadores de Párvulos </i>
                     </div>
-                    <h4>Juan Chiquito</h4>
-                    <i>Docente</i><br>
-                    <i>Licenciado en Ciencias de la Educación Mención Educación Física</i>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                <div class="text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4 rounded-circle">
-                        <img class="img-fluid w-100" src="img/edison1.jpg" alt="">
-                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <!-- Enlace para enviar un correo -->
-                            <a class="btn btn-outline-light text-center mr-2 px-0" 
-                               style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;" 
-                               href="mailto:edisonbarberan22@gmail.com">
-                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
-                            </a>
-                            <!-- Puedes agregar más íconos aquí si lo deseas -->
-                        </div>
-                    </div>
-                    <h4>Edison Barberán</h4>
-                    <i>Docente</i><br>
-                    <i>Pedagogía de las Ciencias Experimentales Química y Biología </i>
-                </div>
-               
-            </div>
-           
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item fourth">
-                <div class="text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4 rounded-circle">
-                        <img class="img-fluid w-100" src="img/maria2a.jpeg" alt="">
-                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <!-- Enlace para enviar un correo -->
-                            <a class="btn btn-outline-light text-center mr-2 px-0" 
-                               style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;" 
-                               href="mailto:georgina_i_1973@hotmail.com">
-                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
-                            </a>
-                            <!-- Puedes agregar más íconos aquí si lo deseas -->
-                        </div>
-                    </div>
-                    <h4>Edison Barberán</h4>
-                    <i>Docente</i><br>
-                    <i>Mgs.En Ciencias de la Educacion con enfasis en gestion educativa</i>
                 </div>
 
-               
-            
-            </div>
-           
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item fourth">
-                <div class="text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4 rounded-circle">
-                        <img class="img-fluid w-100" src="img/JP - José Plúas (1).jpg" alt="">
-                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <!-- Enlace para enviar un correo -->
-                            <a class="btn btn-outline-light text-center mr-2 px-0"
-                                style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
-                                href="mailto:pluspepin@gmail.com">
-                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
-                            </a>
-                            <!-- Puedes agregar más íconos aquí si lo deseas -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/juan1.jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:juancarlos197860@hotmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
                         </div>
+                        <h4>Juan Chiquito</h4>
+                        <i>Docente</i><br>
+                        <i>Licenciado en Ciencias de la Educación Mención Educación Física</i>
                     </div>
-                    <h4>José Plúas</h4>
-                    <i>Docente</i><br>
-                    <i>Licenciado en Ciencias de la Educación</i>
                 </div>
-            
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/edison1.jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:edisonbarberan22@gmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
+                        </div>
+                        <h4>Edison Barberán</h4>
+                        <i>Docente</i><br>
+                        <i>Pedagogía de las Ciencias Experimentales Química y Biología </i>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/germanico.jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:germanico.a71@gmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
+                        </div>
+                        <h4>Germánico Antamba </h4>
+                        <i>Docente</i><br>
+                        <i>Ingeniero Eléctrico </i>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item fourth">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/maria2a.jpeg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:georgina_i_1973@hotmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
+                        </div>
+                        <h4>Edison Barberán</h4>
+                        <i>Docente</i><br>
+                        <i>Mgs.En Ciencias de la Educacion con enfasis en gestion educativa</i>
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item fourth">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/JP - José Plúas (1).jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:pluspepin@gmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
+                        </div>
+                        <h4>José Plúas</h4>
+                        <i>Docente</i><br>
+                        <i>Licenciado en Ciencias de la Educación</i>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item fourth">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/jhon (2).jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:john-037@outlook.es ">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
+                        </div>
+                        <h4>John Bastidas</h4>
+                        <i>Docente de Apoyo</i><br>
+                        <i>Educación Basica</i>
+                    </div>
+
+                </div>
+          
             </div>
+  <!-- Paginación -->
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item disabled" id="prevPage">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <!-- Aquí se añadirán los números de página dinámicamente -->
+        <li class="page-item">
+            <a class="page-link" href="#" id="nextPage">Next</a>
+        </li>
+    </ul>
+</nav>
 
 
         </div>
+              
+      
     </div>
-</div>
-<!-- Gallery End -->
+    <!-- Gallery End -->
 
     <!-- Team End -->
 
@@ -274,10 +367,12 @@
                 <div class="testimonial-item px-3">
                     <div class="bg-light shadow-sm rounded mb-4 p-4">
                         <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor
+                        ipsum clita
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-1.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <img class="rounded-circle" src="img/testimonial-1.jpg" style="width: 70px; height: 70px;"
+                            alt="Image">
                         <div class="pl-3">
                             <h5>Parent Name</h5>
                             <i>Profession</i>
@@ -287,10 +382,12 @@
                 <div class="testimonial-item px-3">
                     <div class="bg-light shadow-sm rounded mb-4 p-4">
                         <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor
+                        ipsum clita
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-2.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <img class="rounded-circle" src="img/testimonial-2.jpg" style="width: 70px; height: 70px;"
+                            alt="Image">
                         <div class="pl-3">
                             <h5>Parent Name</h5>
                             <i>Profession</i>
@@ -300,10 +397,12 @@
                 <div class="testimonial-item px-3">
                     <div class="bg-light shadow-sm rounded mb-4 p-4">
                         <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor
+                        ipsum clita
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-3.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <img class="rounded-circle" src="img/testimonial-3.jpg" style="width: 70px; height: 70px;"
+                            alt="Image">
                         <div class="pl-3">
                             <h5>Parent Name</h5>
                             <i>Profession</i>
@@ -313,10 +412,12 @@
                 <div class="testimonial-item px-3">
                     <div class="bg-light shadow-sm rounded mb-4 p-4">
                         <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor
+                        ipsum clita
                     </div>
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-4.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <img class="rounded-circle" src="img/testimonial-4.jpg" style="width: 70px; height: 70px;"
+                            alt="Image">
                         <div class="pl-3">
                             <h5>Parent Name</h5>
                             <i>Profession</i>
@@ -329,81 +430,89 @@
     <!-- Testimonial End -->
 
 
-  <!-- Footer Start -->
-  <div class="container-fluid bg-danger text-white mt-8 py-8 px-sm-8 px-md-8">
-    <div class="row pt-4">
-        <div class="col-lg-6 col-md-6 mb-5">
-            <a href="" class="navbar-brand font-weight-bold text-secondary">
-                <img src="img/logo.png" alt="KidKinder"
-                    style="height: 60px; width: 150px; border-radius: 10px; border: 2px solid #ffffff;">
-            </a>
-            <p>Nuestra zona, caracterizada por su trabajo en la educación inclusiva y propuestas agroecológicas, 
-                abarca y acompaña a 13 centros educativos y a 2 residencias educativas en las provincias de 
-                Santo Domingo de los Tsáchilas, Esmeraldas,
-                 Los Ríos, Manabí y Pichincha. Atiende a un total de 4 138 niños, 
-                 niñas y adolescentes beneficiarios de educación formal y 36 de educación no formal.</p>
-            <div class="d-flex justify-content-start mt-4">
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-danger text-white mt-8 py-8 px-sm-8 px-md-8">
+        <div class="row pt-4">
+            <div class="col-lg-6 col-md-6 mb-5">
+                <a href="" class="navbar-brand font-weight-bold text-secondary">
+                    <img src="img/logo.png" alt="KidKinder"
+                        style="height: 60px; width: 150px; border-radius: 10px; border: 2px solid #ffffff;">
+                </a>
+                <p>Nuestra zona, caracterizada por su trabajo en la educación inclusiva y propuestas agroecológicas,
+                    abarca y acompaña a 13 centros educativos y a 2 residencias educativas en las provincias de
+                    Santo Domingo de los Tsáchilas, Esmeraldas,
+                    Los Ríos, Manabí y Pichincha. Atiende a un total de 4 138 niños,
+                    niñas y adolescentes beneficiarios de educación formal y 36 de educación no formal.</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <style>
+                    .social-btn {
+                        background-color: white;
+                        color: #e61010;
+                        /* Color azul del ícono */
+                        border-color: #f3f8fd;
+                        /* Borde azul */
+                    }
+
+                    .social-btn:hover {
+                        background-color: #ffefef;
+                        /* Cambia el fondo a azul al pasar el mouse */
+                        color: rgb(212, 11, 11);
+                        /* Cambia el color del ícono a blanco al pasar el mouse */
+                    }
+                </style>
+
+
             </div>
-            
-            <style>
-                .social-btn {
-                    background-color: white;
-                    color: #e61010; /* Color azul del ícono */
-                    border-color: #f3f8fd; /* Borde azul */
-                }
-            
-                .social-btn:hover {
-                    background-color: #ffefef; /* Cambia el fondo a azul al pasar el mouse */
-                    color: rgb(212, 11, 11); /* Cambia el color del ícono a blanco al pasar el mouse */
-                }
-            </style>
-            
-            
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h3 class="text-white mb-4">Ponte en contacto</h3>
-            <div class="d-flex">
-                <h4 class="fa fa-map-marker-alt text-white"></h4>
-                <div class="pl-3">
-                    <h5 class="text-white">Dirección</h5>
-                    <p>123 Street, New York, USA</p>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-white mb-4">Ponte en contacto</h3>
+                <div class="d-flex">
+                    <h4 class="fa fa-map-marker-alt text-white"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Dirección</h5>
+                        <p>123 Street, New York, USA</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-envelope text-white"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Email</h5>
+                        <p>info@example.com</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-phone-alt text-white"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Celular</h5>
+                        <p>+012 345 67890</p>
+                    </div>
                 </div>
             </div>
-            <div class="d-flex">
-                <h4 class="fa fa-envelope text-white"></h4>
-                <div class="pl-3">
-                    <h5 class="text-white">Email</h5>
-                    <p>info@example.com</p>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-white mb-4">Enlaces rápidos</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Sobre
+                        nosotros</a>
+                    <a class="text-white mb-2" href="class.html"><i class="fa fa-angle-right mr-2"></i>Nuestras
+                        Clases</a>
+                    <a class="text-white mb-2" href="team.html"><i class="fa fa-angle-right mr-2"></i>Nuestros
+                        maestros</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestro Blog</a>
+                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contacta con
+                        nosotros</a>
                 </div>
             </div>
-            <div class="d-flex">
-                <h4 class="fa fa-phone-alt text-white"></h4>
-                <div class="pl-3">
-                    <h5 class="text-white">Celular</h5>
-                    <p>+012 345 67890</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h3 class="text-white mb-4">Enlaces rápidos</h3>
-            <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
-                <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Sobre nosotros</a>
-                <a class="text-white mb-2" href="class.html"><i class="fa fa-angle-right mr-2"></i>Nuestras Clases</a>
-                <a class="text-white mb-2" href="team.html"><i class="fa fa-angle-right mr-2"></i>Nuestros maestros</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestro Blog</a>
-                <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contacta con nosotros</a>
-            </div>
-        </div>
-        <!-- <div class="col-lg-3 col-md-6 mb-5">
+            <!-- <div class="col-lg-3 col-md-6 mb-5">
             <h3 class="text-primary mb-4">Newsletter</h3>
             <form action="">
                 <div class="form-group">
@@ -418,23 +527,24 @@
                 </div>
             </form>
         </div> -->
+        </div>
+        <div class="container-fluid pt-5" style="border-top: 1px solid rgb(255, 255, 255);;">
+            <p class="m-0 text-center text-white">
+                &copy; <a class="text-white font-weight-bold" href="#">Fe y Alegría</a>.Todos los derechos reservados.
+
+
+            </p>
+        </div>
     </div>
-    <div class="container-fluid pt-5" style="border-top: 1px solid rgb(255, 255, 255);;">
-        <p class="m-0 text-center text-white">
-            &copy; <a class="text-white font-weight-bold" href="#">Fe y Alegría</a>.Todos los derechos reservados.
-          
-          
-        </p>
-    </div>
-</div>
-<!-- Footer End -->
+    <!-- Footer End -->
 
 
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
+    
+        
+        
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

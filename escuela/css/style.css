@@ -9836,7 +9836,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .team .team-social {
   top: 0;
-  background:#ff0000ab;
+  background:#ff00004f;
   opacity: 0;
   z-index: 1;
   transition: .5s;
