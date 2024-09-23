@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" href="path/to/bootstrap.css"> <!-- Asegúrate de enlazar Bootstrap -->
     <style>
-     .container {
+        .container {
             position: relative;
             overflow: hidden;
         }
@@ -44,79 +44,102 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('img/fondo1.png'); /* Cambia esta ruta a la ubicación de tu imagen */
+            background-image: url('img/fondo1.png');
+            /* Cambia esta ruta a la ubicación de tu imagen */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            opacity: 0.2; /* Ajusta la visibilidad de la imagen de fondo */
-            z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+            opacity: 0.2;
+            /* Ajusta la visibilidad de la imagen de fondo */
+            z-index: -1;
+            /* Asegura que el pseudo-elemento esté detrás del contenido */
         }
+
         .text-white1 {
-  color: rgb(255, 248, 248) !important;
-  text-shadow: 1px 1px 0 #000, /* Sombra hacia la derecha y abajo */
-               -1px -1px 0 #000, /* Sombra hacia la izquierda y arriba */
-               1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
-               -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
-}
-.text-white12 {
-  color: rgb(233, 164, 16) !important;
-  text-shadow: 1px 1px 0 #000, /* Sombra hacia la derecha y abajo */
-               -1px -1px 0 #000, /* Sombra hacia la izquierda y arriba */
-               1px -1px 0 #000, /* Sombra hacia la derecha y arriba */
-               -1px 1px 0 #000; /* Sombra hacia la izquierda y abajo */
-}
-.text-white13 {
-  color: rgb(0, 0, 0) !important;
-}
-.bg-primary {
-    position: relative;
-    overflow: hidden;
-}
+            color: rgb(255, 248, 248) !important;
+            text-shadow: 1px 1px 0 #000,
+                /* Sombra hacia la derecha y abajo */
+                -1px -1px 0 #000,
+                /* Sombra hacia la izquierda y arriba */
+                1px -1px 0 #000,
+                /* Sombra hacia la derecha y arriba */
+                -1px 1px 0 #000;
+            /* Sombra hacia la izquierda y abajo */
+        }
 
-.bg-primary::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(68, 0, 0, 0.5); /* Ajusta la opacidad aquí */
-    z-index: 1;
-}
+        .text-white12 {
+            color: rgb(233, 164, 16) !important;
+            text-shadow: 1px 1px 0 #000,
+                /* Sombra hacia la derecha y abajo */
+                -1px -1px 0 #000,
+                /* Sombra hacia la izquierda y arriba */
+                1px -1px 0 #000,
+                /* Sombra hacia la derecha y arriba */
+                -1px 1px 0 #000;
+            /* Sombra hacia la izquierda y abajo */
+        }
 
-.bg-primary .d-flex {
-    position: relative;
-    z-index: 2;
-    color: #fff; /* Asegúrate de que el texto sea legible sobre la superposición */
-}
+        .text-white13 {
+            color: rgb(0, 0, 0) !important;
+        }
 
-/* Define una animación de fondo que se mueva ligeramente hacia arriba y hacia abajo */
-@keyframes backgroundAnimation {
-  0% {
-    background-position: center 50%;
-  }
-  50% {
-    background-position: center 70%;
-  }
-  100% {
-    background-position: center 50%;
-  }
-}
-/* Aplica la animación al contenedor */
-.animated-background {
-  animation: backgroundAnimation 10s infinite alternate;
-}
+        .bg-primary {
+            position: relative;
+            overflow: hidden;
+        }
 
-.text-whitea {
-  color: rgb(7, 3, 3) !important;
-  text-shadow: 1px 1px 0 rgb(255, 255, 255), /* Sombra hacia la derecha y abajo */
-               -1px -1px 0 rgb(211, 209, 209), /* Sombra hacia la izquierda y arriba */
-               1px -1px 0 rgb(219, 219, 219), /* Sombra hacia la derecha y arriba */
-               -1px 1px 0 rgb(252, 252, 252); /* Sombra hacia la izquierda y abajo */
-}
+        .bg-primary::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(68, 0, 0, 0.5);
+            /* Ajusta la opacidad aquí */
+            z-index: 1;
+        }
 
+        .bg-primary .d-flex {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            /* Asegúrate de que el texto sea legible sobre la superposición */
+        }
+
+        /* Define una animación de fondo que se mueva ligeramente hacia arriba y hacia abajo */
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: center 50%;
+            }
+
+            50% {
+                background-position: center 70%;
+            }
+
+            100% {
+                background-position: center 50%;
+            }
+        }
+
+        /* Aplica la animación al contenedor */
+        .animated-background {
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        .text-whitea {
+            color: rgb(7, 3, 3) !important;
+            text-shadow: 1px 1px 0 rgb(255, 255, 255),
+                /* Sombra hacia la derecha y abajo */
+                -1px -1px 0 rgb(211, 209, 209),
+                /* Sombra hacia la izquierda y arriba */
+                1px -1px 0 rgb(219, 219, 219),
+                /* Sombra hacia la derecha y arriba */
+                -1px 1px 0 rgb(252, 252, 252);
+            /* Sombra hacia la izquierda y abajo */
+        }
     </style>
- </head>
+</head>
 </head>
 
 <body>
@@ -156,29 +179,35 @@
         </nav>
     </div>
     <!-- Navbar End -->
-  
+
     <!-- Header Start -->
-    <div class="container-fluid bg-primary mb-5 animated-background" style="background-image: url('img/inicio.jpg'); background-size: cover; background-position: center;">
- 
+    <div class="container-fluid bg-primary mb-5 animated-background"
+        style="background-image: url('img/inicio.jpg'); background-size: cover; background-position: center;">
+
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 430px">
             <div class="row align-items-center px-3">
                 <div class="col-lg-12 text-center">
-                    <h4 class="text-white12 mb-4 mt-5 mt-lg-12 text-animation">"Educar Humanizando el corazón para la libertad
+                    <h4 class="text-white12 mb-4 mt-5 mt-lg-12 text-animation">"Educar Humanizando el corazón para la
+                        libertad
                         y la justicia "</h4>
-                    <h1 class="display-3 font-weight-bold text-white1 text-animation" style="animation-delay: 0.5s;">Unidad
-                        Educativa Fiscomisional 
-                        <h1 class="display-3 font-weight-bold text-white1 text-animation" style="animation-delay: 0.5s;">"Fe y Alegría" </h1></h1>
-                        <p class="text-whitea mb-12 text-animation" style="animation-delay: 1s; font-weight: bold;">SANTO DOMINGO-ECUADOR</p>
+                    <h1 class="display-3 font-weight-bold text-white1 text-animation" style="animation-delay: 0.5s;">
+                        Unidad
+                        Educativa Fiscomisional
+                        <h1 class="display-3 font-weight-bold text-white1 text-animation"
+                            style="animation-delay: 0.5s;">"Fe y Alegría" </h1>
+                    </h1>
+                    <p class="text-whitea mb-12 text-animation" style="animation-delay: 1s; font-weight: bold;">SANTO
+                        DOMINGO-ECUADOR</p>
 
                 </div>
                 <!-- <div class="col-lg-6 text-center text-lg-right">
                     <img class="img-fluid mt-5" src="img/header.jpg" alt="">
                 </div> -->
-            </div>    
+            </div>
         </div>
     </div>
-    
-    
+
+
     <!-- Header Start -->
     <!-- <div class="container-fluid bg-primary mb-5" style="background-image: url('img/fondo2.png'); background-size: cover; background-position: center;">
     
@@ -203,20 +232,26 @@
 
     <div class="container-fluid py-5">
         <div class="container">
-            
+
             <div class="row align-items-center">
-                
-            
+
+
                 <div class="col-lg-7">
-                  
+
                     <h1 class="mb-4">Misión y Visión</h1>
                     <p class="section-title px-5"><span class="px-2">Misión</span></p>
-                    <p>Fe y Alegría - Ecuador es un movimiento de educación popular integral, promoción social y acción pública que, partiendo de los diversos contextos de comunidades y personas excluidas y empobrecidas de nuestro país, contribuye a la transformación social, 
+                    <p>Fe y Alegría - Ecuador es un movimiento de educación popular integral, promoción social y acción
+                        pública que, partiendo de los diversos contextos de comunidades y personas excluidas y
+                        empobrecidas de nuestro país, contribuye a la transformación social,
                         mediante una propuesta educativa de calidad, innovadora y participativa,
-                         desde la vivencia de una espiritualidad transformadora inspirada en el evangelio, los derechos humanos y de la naturaleza.</p>
-                         <p class="section-title px-5"><span class="px-2">Visión</span></p>
-                    <p>Soñamos con un Ecuador donde todas/os tengamos las mismas posibilidades para una vida digna, con una Fe y Alegría más profética, comprometida con el cuidado y defensa de la persona y la casa común, presente en las nuevas fronteras de exclusión, capaz de responder a los contextos y necesidades educativas de nuestro país.</p>
-                    
+                        desde la vivencia de una espiritualidad transformadora inspirada en el evangelio, los derechos
+                        humanos y de la naturaleza.</p>
+                    <p class="section-title px-5"><span class="px-2">Visión</span></p>
+                    <p>Soñamos con un Ecuador donde todas/os tengamos las mismas posibilidades para una vida digna, con
+                        una Fe y Alegría más profética, comprometida con el cuidado y defensa de la persona y la casa
+                        común, presente en las nuevas fronteras de exclusión, capaz de responder a los contextos y
+                        necesidades educativas de nuestro país.</p>
+
                 </div>
                 <div class="col-lg-5">
                     <img class="img-fluid rounded mb-5 mb-lg-0" src="img/mision.jpg" alt="">
@@ -227,9 +262,9 @@
     <!-- About End -->
     <!-- Facilities Start -->
     <div class="container-fluid pt-5">
-     
+
         <div class="container pb-3">
-           
+
             <center>
                 <h1 class="mb-4">Valores institucionales</h1>
             </center>
@@ -465,72 +500,51 @@
                 <h1 class="mb-4">Autoridades</h1>
             </div>
             <div class="row">
+
+
+
                 <div class="col-md-6 col-lg-3 text-center team mb-5">
                     <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/diego.jpg" alt="">
                         <div
                             class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <!-- Enlace para enviar un correo -->
+                            <a class="btn btn-outline-light text-center mr-2 px-0"
+                                style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                href="mailto:diego.garcia@feyalegria.org">
+                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                            </a>
+                            <!-- Puedes agregar más íconos aquí si lo deseas -->
                         </div>
                     </div>
-                    <h4>Julia Smith</h4>
-                    <i>Music Teacher</i>
+                    <h4>Diego García </h4>
+                    <i>Rector</i><br>
+                    <i>Doctor en Ciencias Humanas </i>
+                    
                 </div>
                 <div class="col-md-6 col-lg-3 text-center team mb-5">
                     <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/diego.jpg" alt="">
                         <div
                             class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <!-- Enlace para enviar un correo -->
+                            <a class="btn btn-outline-light text-center mr-2 px-0"
+                                style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                href="mailto:diego.garcia@feyalegria.org">
+                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                            </a>
+                            <!-- Puedes agregar más íconos aquí si lo deseas -->
                         </div>
                     </div>
-                    <h4>Jhon Doe</h4>
-                    <i>Language Teacher</i>
+                    <h4>Diego García </h4>
+                    <i>Rector</i><br>
+                    <i>Doctor en Ciencias Humanas </i>
+                    
                 </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                        <div
-                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <h4>Mollie Ross</h4>
-                    <i>Dance Teacher</i>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
-                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
-                        <div
-                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
-                                href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <h4>Donald John</h4>
-                    <i>Art Teacher</i>
-                </div>
+
             </div>
         </div>
+    </div>
     </div>
     <!-- Team End -->
 
@@ -630,10 +644,10 @@
                             <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod
                                 kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
                             <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a> -->
-                        <!-- </div>
+    <!-- </div>
                     </div>
                 </div> -->
-                <!-- <div class="col-lg-4 mb-4">
+    <!-- <div class="col-lg-4 mb-4">
                     <div class="card border-0 shadow-sm mb-2">
                         <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="">
                         <div class="card-body bg-light text-center p-4">
@@ -646,11 +660,11 @@
                             <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod
                                 kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
                              <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a> -->
-                        <!-- </div>
+    <!-- </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4"> -->
-                    <!-- <div class="card border-0 shadow-sm mb-2">
+    <!-- <div class="card border-0 shadow-sm mb-2">
                         <img class="card-img-top mb-2" src="img/blog-3.jpg" alt="">
                         <div class="card-body bg-light text-center p-4">
                             <h4 class="">Diam amet eos at no eos</h4>
@@ -660,14 +674,14 @@
                                 <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
                             </div>
                             <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod
-                                kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p> --> 
-                            <!-- <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a> -->
-                        <!-- </div>
+                                kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p> -->
+    <!-- <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a> -->
+    <!-- </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> --> 
+    </div> -->
     <!-- Blog End -->
 
 
@@ -681,16 +695,18 @@
                     <img src="img/logosd.jpg" alt="KidKinder"
                         style="height: 120px; width: 150px; border-radius: 10px; border: 2px solid #ffffff;">
                 </a>
-                <p>Nuestra zona, caracterizada por su trabajo en la educación inclusiva y propuestas agroecológicas, 
-                    abarca y acompaña a 13 centros educativos y a 2 residencias educativas en las provincias de 
+                <p>Nuestra zona, caracterizada por su trabajo en la educación inclusiva y propuestas agroecológicas,
+                    abarca y acompaña a 13 centros educativos y a 2 residencias educativas en las provincias de
                     Santo Domingo de los Tsáchilas, Esmeraldas,
-                     Los Ríos, Manabí y Pichincha. Atiende a un total de 4 138 niños, 
-                     niñas y adolescentes beneficiarios de educación formal y 36 de educación no formal.</p>
+                    Los Ríos, Manabí y Pichincha. Atiende a un total de 4 138 niños,
+                    niñas y adolescentes beneficiarios de educación formal y 36 de educación no formal.</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
                         style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
-                        style="width: 38px; height: 38px;" href="https://www.facebook.com/uefeyalegriastodgo?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                        style="width: 38px; height: 38px;"
+                        href="https://www.facebook.com/uefeyalegriastodgo?mibextid=ZbWKwL"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
                         style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 social-btn"
@@ -744,11 +760,15 @@
                 <h3 class="text-white mb-4">Enlaces rápidos</h3>
                 <div class="d-flex flex-column justify-content-start">
                     <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
-                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Sobre nosotros</a>
-                    <a class="text-white mb-2" href="class.html"><i class="fa fa-angle-right mr-2"></i>Nuestras Clases</a>
-                    <a class="text-white mb-2" href="team.html"><i class="fa fa-angle-right mr-2"></i>Nuestros maestros</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>Sobre
+                        nosotros</a>
+                    <a class="text-white mb-2" href="class.html"><i class="fa fa-angle-right mr-2"></i>Nuestras
+                        Clases</a>
+                    <a class="text-white mb-2" href="team.html"><i class="fa fa-angle-right mr-2"></i>Nuestros
+                        maestros</a>
                     <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestro Blog</a>
-                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contacta con nosotros</a>
+                    <a class="text-white" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contacta con
+                        nosotros</a>
                 </div>
             </div>
             <!-- <div class="col-lg-3 col-md-6 mb-5">
