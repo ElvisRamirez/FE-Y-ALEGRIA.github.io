@@ -106,11 +106,40 @@
         z-index: 1;
         /* Incrementa o decrementa según sea necesario */
     }
+
+/* Ajuste del contenedor */
+.position-relative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-width: 300px; /* Tamaño máximo para que no se estire demasiado */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%; /* Redondea los bordes */
+    height: auto;
+}
+
+/* Ajuste de la imagen */
+img.img-fluid {
+    width: 100%; /* Ocupa el 100% del contenedor sin estirarse */
+    height: auto; /* Mantiene las proporciones */
+    object-fit: cover; /* Evita distorsión de la imagen */
+    border-radius: 50%; /* Mantiene la forma circular */
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    .position-relative {
+        max-width: 150px; /* Tamaño más pequeño para pantallas móviles */
+    }
+}
+
 </style>
 
 <body>
     <!-- Navbar Start -->
-    <div class="container-fluid bg-light position-relative shadow">
+    <div class="container-fluid bg-light position-relative1 shadow">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
             <a href="" class="navbar-brand font-weight-bold text-secondary">
                 <img src="img/logo.png" alt="KidKinder"
@@ -892,19 +921,19 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js " defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"defer></script>
+    <script src="lib/easing/easing.min.js"defer></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"defer></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"defer></script>
+    <script src="lib/lightbox/js/lightbox.min.js"defer></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <script src="mail/jqBootstrapValidation.min.js"defer></script>
+    <script src="mail/contact.js"defer></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js"defer></script>
 </body>
 
 </html>
