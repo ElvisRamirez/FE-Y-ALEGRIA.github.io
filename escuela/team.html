@@ -107,34 +107,41 @@
         /* Incrementa o decrementa según sea necesario */
     }
 
-/* Ajuste del contenedor */
-.position-relative {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    max-width: 300px; /* Tamaño máximo para que no se estire demasiado */
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 50%; /* Redondea los bordes */
-    height: auto;
-}
-
-/* Ajuste de la imagen */
-img.img-fluid {
-    width: 100%; /* Ocupa el 100% del contenedor sin estirarse */
-    height: auto; /* Mantiene las proporciones */
-    object-fit: cover; /* Evita distorsión de la imagen */
-    border-radius: 50%; /* Mantiene la forma circular */
-}
-
-/* Para pantallas pequeñas */
-@media (max-width: 768px) {
+    /* Ajuste del contenedor */
     .position-relative {
-        max-width: 150px; /* Tamaño más pequeño para pantallas móviles */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* Asegura que el contenedor ocupe todo el ancho disponible */
+        max-width: 300px;
+        /* Tamaño máximo para que no se estire demasiado */
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 50%;
+        /* Redondea los bordes */
+        height: auto;
     }
-}
 
+    /* Ajuste de la imagen */
+    img.img-fluid {
+        width: 100%;
+        /* Ocupa el 100% del contenedor sin estirarse */
+        height: auto;
+        /* Mantiene las proporciones */
+        object-fit: cover;
+        /* Evita distorsión de la imagen */
+        border-radius: 50%;
+        /* Mantiene la forma circular */
+    }
+
+    /* Para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .position-relative {
+            max-width: 150px;
+            /* Tamaño más pequeño para pantallas móviles */
+        }
+    }
 </style>
 
 <body>
@@ -580,6 +587,52 @@ img.img-fluid {
                     </div>
 
                 </div>
+
+                <div class="col-md-6 col-lg-3 mb-5 portfolio-item fourth">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/Marcia.jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:marciaortegas@hotmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
+                        </div>
+                        <h4>Marcia Ortega  </h4>
+                        <i>Docente </i><br>
+                        <i>Licenciada Ciencias de la Educación </i>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-5 portfolio-item fourth">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/oleida.jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:oleidahurtado@gmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
+                        </div>
+                        <h4>Oleida Hurtado</h4>
+                        <i>Docente </i><br>
+                        <i>Licenciada en ciencias de la Educación </i>
+                    </div>
+
+                </div>
+
+
                 <div class="col-md-6 col-lg-3 mb-5 portfolio-item six">
                     <div class="text-center team mb-5">
                         <div class="position-relative overflow-hidden mb-4 rounded-circle">
@@ -601,6 +654,31 @@ img.img-fluid {
                     </div>
 
                 </div>
+
+                
+                <div class="col-md-6 col-lg-3 mb-5 portfolio-item second six">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/diego.jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:roberto199366@hotmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
+                        </div>
+                        <h4>Roberto Chamorro</h4>
+                        <i>Inspector General y Docente</i><br>
+                        <i>Magíster en Organización de Unidades Educativas </i>
+                    </div>
+
+                </div>
+
+
                 <div class="col-md-6 col-lg-3 mb-5 portfolio-item seven">
                     <div class="text-center team mb-5">
                         <div class="position-relative overflow-hidden mb-4 rounded-circle">
@@ -671,7 +749,7 @@ img.img-fluid {
                 <div class="col-md-6 col-lg-3 mb-5 portfolio-item nine">
                     <div class="text-center team mb-5">
                         <div class="position-relative overflow-hidden mb-4 rounded-circle">
-                            <img class="img-fluid w-100" src="img/william.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/ari.jpg" alt="">
                             <div
                                 class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
                                 <!-- Enlace para enviar un correo -->
@@ -712,8 +790,49 @@ img.img-fluid {
 
                 </div>
 
+                <div class="col-md-6 col-lg-3 mb-5 portfolio-item nine">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/luis.jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:luigonbeltran@gmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
+                        </div>
+                        <h4>Luis Beltrán  </h4>
+                        <i>Intérprete</i><br>
+                        <i>Licenciado en Ciencias de la Educación Mención Educación Básica  </i>
+                    </div>
 
+                </div>
 
+                <div class="col-md-6 col-lg-3 mb-5 portfolio-item nine">
+                    <div class="text-center team mb-5">
+                        <div class="position-relative overflow-hidden mb-4 rounded-circle">
+                            <img class="img-fluid w-100" src="img/priscila.jpg" alt="">
+                            <div
+                                class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                                <!-- Enlace para enviar un correo -->
+                                <a class="btn btn-outline-light text-center mr-2 px-0"
+                                    style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; padding: 0;"
+                                    href="mailto:priscilapinargote2015@gmail.com">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <!-- Puedes agregar más íconos aquí si lo deseas -->
+                            </div>
+                        </div>
+                        <h4>Priscila Pinargote</h4>
+                        <i>Intérprete</i><br>
+                        <i>Licenciada en Contabilidad y Auditoria</i>
+                    </div>
+
+                </div>
 
 
             </div>
@@ -922,18 +1041,18 @@ img.img-fluid {
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js " defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"defer></script>
-    <script src="lib/easing/easing.min.js"defer></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"defer></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"defer></script>
-    <script src="lib/lightbox/js/lightbox.min.js"defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" defer></script>
+    <script src="lib/easing/easing.min.js" defer></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
+    <script src="lib/isotope/isotope.pkgd.min.js" defer></script>
+    <script src="lib/lightbox/js/lightbox.min.js" defer></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"defer></script>
-    <script src="mail/contact.js"defer></script>
+    <script src="mail/jqBootstrapValidation.min.js" defer></script>
+    <script src="mail/contact.js" defer></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
