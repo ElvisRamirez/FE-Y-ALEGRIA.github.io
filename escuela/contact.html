@@ -24,7 +24,10 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -75,7 +78,14 @@
 .animated-background {
   animation: backgroundAnimation 10s infinite alternate;
 }
-  
+.back-to-top {
+    position: fixed; /* Asegura que el botón esté fijo en su posición */
+    bottom: 20px; /* Ajusta según tu preferencia */
+    right: 20px;  /* Ajusta según tu preferencia */
+    z-index: 9999; /* Asegura que el botón esté por encima del mapa */
+    display: none; /* Mantiene el estilo original hasta que se muestre */
+}
+
 </style>
 <body>
     <!-- Navbar Start -->
@@ -137,22 +147,20 @@
                 <div class="col-lg-7 mb-5">
                     <div id="map" style="height: 500px; width: 100%;"></div>
                 </div>
-                
                 <script>
-                   function iniciarMap(){
-    var coord = {lat:-0.24645083347963945 ,lng: -79.17423682820917};
-    var map = new google.maps.Map(document.getElementById('map'),{
-      zoom: 10,
-      center: coord
-    });
-    var marker = new google.maps.Marker({
-      position: coord,
-      map: map
-    });
-}
+                    let map = L.map('map').setView([-0.24645083347963945, -79.17423682820917], 16);
+            
+                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+            
+                    // Crear un marcador en las coordenadas de FE y Alegría
+                    let marker = L.marker([-0.246205, -79.175055]).addTo(map);
+            
+                    // Vincular el marcador a un popup que redirige al enlace específico de Google Maps
+                    marker.bindPopup('<a href="https://maps.app.goo.gl/z6gxQhbjz7NigXpP6" target="_blank">Fe y Alegría</a>').openPopup();
                 </script>
-                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
-      
+            
                 
                 <div class="col-lg-5 mb-5">
                     <p>Desde la mirada de Fe y Alegría soñar en comunidades más humanas e inclusivas demanda cimentar las condiciones que den lugar a sociedades pacíficas, entendiendo la paz como motor de justicia y equidad.
